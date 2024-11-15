@@ -1,0 +1,52 @@
+.navbar {
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #6a11cb;
+}
+
+.theme-toggle {
+    margin-left: auto;
+    font-size: 1.5em;
+    background: transparent;
+    border: none;
+    color: #6a11cb;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Dark Theme Navbar */
+body.dark-theme .navbar {
+    background-color: #333;
+}
+
+body.dark-theme .navbar-brand,
+body.dark-theme .nav-link,
+body.dark-theme .theme-toggle {
+    color: #ffd700;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        background-color: #fff;
+        padding: 10px 0;
+        gap: 10px;
+    }
+    body.dark-theme .navbar-nav {
+        background-color: #333;
+    }
+}
